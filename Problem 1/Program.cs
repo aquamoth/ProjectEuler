@@ -12,10 +12,34 @@ namespace Problem_1
 		{
 			//Problem1();
 			//Problem2();
-			Problem3();
+			//Problem3();
+			Problem4();
 
 			Console.WriteLine("Press any key");
 			Console.Read();
+		}
+
+		private static void Problem4()
+		{
+			var max = 0;
+			for (int a = 999; a >= 100; a--)
+			{
+				for (int b = 999; b >= 100; b--)
+				{
+					var value = a * b;
+					var s=value.ToString();
+					if (s== string.Join("", s.Reverse().ToArray()))
+					{
+						if (value > max)
+						{
+							max = value;
+							Console.WriteLine(value);
+							break;
+						}
+					}
+				}
+			}
+
 		}
 
 		private static void Problem3()
