@@ -11,11 +11,39 @@ namespace Problem_1
 		static void Main(string[] args)
 		{
 			//Problem1();
-			Problem2();
-
+			//Problem2();
+			Problem3();
 
 			Console.WriteLine("Press any key");
 			Console.Read();
+		}
+
+		private static void Problem3()
+		{
+			var result = 600851475143;
+			for (int b = 3; result > b * b; b += 2)
+			{
+				while (result % b == 0)
+				{
+					result /= b;
+					Console.WriteLine(b);
+				}
+			}
+if(result>1)
+{
+	Console.WriteLine("Rest is: " + result);
+}
+
+			//var start=(long)result/2;
+			//var end=(long)Math.Sqrt(result);
+			//for (var x = start; x >= end; x -= 2)
+			//{
+			//	if (result % x == 0)
+			//	{
+			//		Console.WriteLine(x);
+			//		break;
+			//	}
+			//}
 		}
 
 		private static void Problem2()
