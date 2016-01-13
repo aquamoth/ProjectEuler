@@ -10,13 +10,28 @@ namespace Problem_1
 	{
 		static void Main(string[] args)
 		{
-			Problem1();
-
-			//Problem2();
+			//Problem1();
+			Problem2();
 
 
 			Console.WriteLine("Press any key");
 			Console.Read();
+		}
+
+		private static void Problem2()
+		{
+			var sum = 0;
+			var a = 1;
+			var b = 2;
+			while (b < 4000000)
+			{
+				if (b % 2 == 0) sum += b;
+				//Console.WriteLine(b + " = " + " => " + sum);
+				var x = a + b;
+				a = b;
+				b = x;
+			}
+			Console.WriteLine(sum);
 		}
 
 		private static void Problem1()
